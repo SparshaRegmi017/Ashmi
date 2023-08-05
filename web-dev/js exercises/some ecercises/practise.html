@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #red{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    #blue{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+    #green{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+    }
+
+    </style>
+</head>
+<body>
+    <button class="squareBtn" id="red" value="red"></button>
+    <button class="squareBtn" id="green" value="green"></button>
+    <button class="squareBtn" id="blue" value="blue"></button>
+    <button id="clearScore">Reset</button>
+    <script>
+    let redBtn=document.getElementById('red')
+    let blueBtn=document.getElementById('blue')
+    let greenBtn=document.getElementById('green')
+    let squares=document.querySelectorAll('.squareBtn')
+    let reset=document.querySelector('#clearScore')
+    const timesClicked={red:0,green:0,blue:0}
+        squares.forEach(square => {
+            square.onclick=()=> {
+                timesClicked[square.value]+=1
+                square.innerText=timesClicked[square.value] 
+            }
+            // square.onclick=()=> console.log(square.value)
+        });
+        const clearScores=()=>{
+            squares.forEach(square=>square.innerText='')
+        }
+        reset.onclick=()=> clearScores();
+        
+    </script>
+</body>
+</html>

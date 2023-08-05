@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 ;
+            padding:0 ;
+        }
+        body{
+            background-color: rgb(133,139,234);
+        }
+        .disp{
+            margin :auto;
+            background-color: rgba(49, 68, 98, 0.847);
+            width: 300px;
+            border-radius: 10px;
+            height: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+            color: white;
+        }
+        h3,input{
+            margin-bottom: 10px;
+        }
+        .btm{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btns
+        {gap:10px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="disp">
+        <div class="content">
+            <h3>Bill Total</h3>
+            <input type="number" id="billTotal" placeholder="$">
+            <h3>Tip</h3>
+            <input type="text" id="billTotal" placeholder="%">
+            <div class="btm">
+                <div class="left">
+                    <p>People</p>
+                    <div class="btns">
+                        <button>+</button>
+                        <p>s</p>
+                        <button>-</button>
+                    </div>
+                </div>
+                <p>Total Per person</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let billTotal=document.getElementById('billTotal');
+        console.log(billTotal)
+    </script>
+</body>
+</html>
